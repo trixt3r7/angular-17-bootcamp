@@ -20,7 +20,8 @@ export class HomeComponent {
     this.guideCards = [
       { title: 'Pipes', description: 'Use pipes to transform strings, currency amounts, dates, and other data for display.', link: '/pipes' },
       { title: 'Directives', description: 'Use Angular\'s built-in directives to manage forms, lists, styles, and what users see.', link: '/directives' },
-      { title: 'Signals', description: 'Granularly tracks how and where your state is used throughout an application.', link: '/signals' }
+      { title: 'Signals', description: 'Granularly tracks how and where your state is used throughout an application.', link: '/signals' },
+      { title: 'SSR', description: 'Angular SSR...', link: '/ssr' }
       ];
 
 
