@@ -1,8 +1,0 @@
-{
-  "routes": [
-    "/directives",
-    "/home",
-    "/pipes",
-    "/signals"
-  ]
-}
