@@ -1,0 +1,81 @@
+<h1>Pipes</h1>
+<p><strong>Angular Docs:&nbsp;</strong> <a href="https://angular.dev/guide/pipes" target="_blank">Understanding Pipes</a></p>
+<h3>Description</h3>
+<p>Use pipes to transform strings, currency amounts, dates, and other data for display.</p>
+<hr>
+<h4>Pipe: Reverse Text</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Input</span>
+    <div class="input-group mb-3 py-1">
+        <input type="text" class="form-control" [(ngModel)]="textReverse">
+    </div>
+        
+    <span class="d-block fw-semibold">Result</span>
+    <p class="p-0 m-0">
+        @if(textReverse)
+        {
+            {{ textReverse | reverse }}
+        }            
+        @else {
+            <span>&nbsp;</span>
+        }
+    </p>
+</div>
+
+<shared-syntax-highlight 
+    title="reverse.pipe.ts" 
+    [code]="pipeReverse" 
+    language="typescript">
+</shared-syntax-highlight>
+
+<shared-syntax-highlight 
+    title="app.component.ts" 
+    [code]="appReverse" 
+    language="typescript">
+</shared-syntax-highlight>
+
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="templateReverse" 
+    language="xml">
+</shared-syntax-highlight>
+
+<hr class="my-4">
+
+<h4>Pipe: File size</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Input (file size in bytes)</span>
+    <div class="input-group mb-3 py-1">
+        <input type="number" class="form-control" [(ngModel)]="myFileSize">
+    </div>
+        
+    <span class="d-block fw-semibold">Result</span>
+    <p class="p-0 m-0">
+        @if(myFileSize)
+        {
+            {{ myFileSize | fileSize }}
+        }            
+        @else {
+            <span>&nbsp;</span>
+        }
+    </p>
+</div>
+
+<shared-syntax-highlight 
+    title="file-size.pipe.ts" 
+    [code]="pipeFileSize" 
+    language="typescript"
+    [showLineNumbers]="true">
+</shared-syntax-highlight>
+
+<shared-syntax-highlight 
+    title="app.component.ts" 
+    [code]="appFileSize" 
+    language="typescript">
+</shared-syntax-highlight>
+
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="templateFileSize" 
+    language="xml">
+</shared-syntax-highlight>

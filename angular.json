@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "highlight.js"
+            ],
             "outputPath": "dist/angular-17-bootcamp",
             "index": "src/index.html",
             "browser": "src/main.ts",

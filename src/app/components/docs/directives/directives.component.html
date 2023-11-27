@@ -1,0 +1,69 @@
+<h1>Directives</h1>
+<p><strong>Angular Docs:&nbsp;</strong> <a href="https://angular.dev/guide/directives" target="_blank">Built-in directives</a></p>
+<h3>Description</h3>
+<p>Use Angular's built-in directives to manage forms, lists, styles, and what users see. <br>
+    The different types of Angular directives are as follows:
+</p>
+<p><strong>Components:</strong> Used with a template. This type of directive is the most common directive type.</p>
+<p><strong>Attribute directives:</strong> Change the appearance or behavior of an element, component, or another directive.</p>
+<p><strong>Structural directives:</strong> Change the DOM layout by adding and removing DOM elements.</p>
+
+<hr class="my-4">
+
+<h3>Components</h3>
+<p><strong>Angular Docs:&nbsp;</strong> <a href="https://angular.dev/guide/components" target="_blank">Anatomy of a component</a></p>
+<p>You should be used to Component directives as they are created with the CLI new component command.</p>
+<p><strong>Components are the most common of the three directive types.</strong> A component controls a patch of screen called a view. You define a component's application logic—what it does to support the view—inside a class. The class interacts with the view through an API of properties and methods. </p>
+<p>Every component must have:</p>
+<ul>
+    <li>A TypeScript class with behaviors such as handling user input and fetching data from a server</li>
+    <li>An HTML template that controls what renders into the DOM</li>
+    <li>A CSS selector that defines how the component is used in HTML</li>
+</ul>
+
+<hr class="my-4">
+
+<h3>Attribute directives</h3>
+<p><strong>Angular Docs:&nbsp;</strong> <a href="https://angular.dev/guide/directives/attribute-directives" target="_blank">Attribute directives</a></p>
+<p>Attribute directives are used as attributes of elements. They change the appearance or behavior of an element, component, or another directive.</p>
+<p> <strong>ngClass, ngStyle, and ngModel</strong> are examples of attribute directives built-in to the Angular framework.</p>
+<p>Dropdowns, accordions, and tabs are just a few common use cases for custom attribute directives. When you have a UI element that will be common throughout your app, you can implement an attribute directive and share it across components and modules to avoid repeating the code for the same functionality.</p>
+
+<h4>Directive: Highlight</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Result on hover</span>
+    <span appHighlight>Highlight me!</span>
+</div>
+<shared-syntax-highlight 
+    title="highlight.directive.ts" 
+    [code]="highlightCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="highlightTemplate" 
+    language="xml">
+</shared-syntax-highlight>
+
+<hr class="my-4">
+
+<h4>Directive: Confirm Visit</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Action</span>
+    <button
+      type="button"
+      class="btn btn-primary text-white"
+      [appConfirmVisit]="visitPipesPage">
+      Visit Pipes Page
+    </button>
+</div>
+<shared-syntax-highlight 
+    title="confirm-visit.directive.ts" 
+    [code]="confirmVisitCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="confirmVisitTemplate" 
+    language="xml">
+</shared-syntax-highlight>

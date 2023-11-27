@@ -1,4 +1,10 @@
-# Angular17Bootcamp
+# Angular 17 Bootcamp
+
+## Resources
+[ngx-highlightjs - Angular syntax highlighting library](https://www.npmjs.com/package/ngx-highlightjs)
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 

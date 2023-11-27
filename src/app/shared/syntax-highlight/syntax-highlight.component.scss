@@ -1,0 +1,21 @@
+@import "../../../scss/abstracts/variables";
+
+$gray-600: #6c757d;
+$gray-500: #adb5bd;
+$code-background: #F6F8FA;
+
+.btn-copy {
+    color: $gray-500;
+}
+.btn-copy:hover {
+    color:$gray-600;
+}
+.code-title
+{
+    background-color: $bg-pink-light;
+    display: block;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-radius:  0.5rem 0.5rem 0 0;
+    border: 1px solid #e1e4e8;
+}

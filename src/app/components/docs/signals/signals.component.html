@@ -1,0 +1,37 @@
+<h1>Signals</h1>
+<p><strong>Angular Docs:&nbsp;</strong> <a href="https://angular.dev/guide/signals" target="_blank">Angular Signals</a></p>
+<h3>Description</h3>
+<p>Angular Signals is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize rendering updates.
+</p>
+<h5>What are signals?</h5>
+<p>A signal is a wrapper around a value that notifies interested consumers when that value changes. Signals can contain any value, from simple primitives to complex data structures.</p>
+<p>You read a signal's value by calling its getter function, which allows Angular to track where the signal is used.</p>
+<p>Signals may be either writable or read-only.</p>
+
+
+<hr class="my-4">
+
+<h4>Signals: Increment Count</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Action</span>
+    <div class="input-group mb-3 py-1">
+        <button class="btn btn-primary text-white" (click)="incrementCount()">
+            Increment count
+        </button>
+    </div>
+        
+    <span class="d-block fw-semibold">Result</span>
+    <p class="m-0">Count: {{ countWritable() }}</p>
+    <p class="m-0">Count * Count: {{ countWritable() * countWritable() }}</p>
+    <p class="m-0">Count (ReadOnly) : {{ countReadOnly() }}</p>
+</div>
+<shared-syntax-highlight 
+    title="app.component.ts" 
+    [code]="signalCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="signalTemplate" 
+    language="xml">
+</shared-syntax-highlight>

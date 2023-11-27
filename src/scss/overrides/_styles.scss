@@ -1,0 +1,19 @@
+// Override Highlight.js styles
+.hljs {
+    color: #383a42;
+    background: #F6F8FA;
+    border-radius: 0 0 .5rem .5rem;
+    border: 1px solid #e1e4e8;
+    border-top: 0px;
+}
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    font-family: 'DM Mono', monospace;
+}
+
+// Override Bootstrap styles
+p {
+    margin-bottom: .75rem !important;
+}
