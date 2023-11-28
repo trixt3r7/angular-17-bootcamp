@@ -16,4 +16,11 @@ pre code.hljs {
 // Override Bootstrap styles
 p {
     margin-bottom: .75rem !important;
+    max-width: 700px;
+}
+
+code {
+    font-size: .875rem !important;
+    background-color: #F2F2F2;
+    padding: 0 .2rem;
 }

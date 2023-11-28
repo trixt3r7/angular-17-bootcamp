@@ -11,18 +11,7 @@ import { SyntaxHighlightComponent } from '../../../shared/syntax-highlight/synta
 })
 export class SsrComponent {
 
-  codeDifference = `
-  // angular.json
-  // tsconfig.app.json
-  // server.ts [SSR Only] # application server
-  // src/
-  // ├── main.server.ts [SSR Only] # main server application bootstrapping
-  // ├──── app/app.config.ts
-  // ├──── app/app.config.server.ts [SSR Only] # server application configuration
-  
-  // angular.json ==============================================
-  
-  // With SSR
+  angularJson = `// With SSR
   "styles": [
       "src/styles.scss"
     ],
@@ -39,12 +28,9 @@ export class SsrComponent {
       "src/styles.css"
     ],
     "scripts": []
-  },
-  
+  },`;
 
-  // tsconfig.app.json =========================================
-  
-  // With SSR
+  tsConfigJson = `// With SSR
   "files": [
     "src/main.ts",
     "src/main.server.ts",
@@ -54,10 +40,16 @@ export class SsrComponent {
   // Without SSR
   "files": [
     "src/main.ts"
-  ],
+  ],`;
 
-  // app.config.ts =============================================
-  
+  codeDifference = `  // angular.json
+  // tsconfig.app.json
+  // server.ts [SSR Only] # application server
+  // src/
+  // ├── main.server.ts [SSR Only] # main server application bootstrapping
+  // ├──── app/app.config.ts
+  // ├──── app/app.config.server.ts [SSR Only] # server application configuration
+   
   // With SSR
   import { ApplicationConfig } from '@angular/core';
   import { provideRouter } from '@angular/router';
@@ -70,7 +62,6 @@ export class SsrComponent {
       provideRouter(routes), provideClientHydration(),
     ]
   };
-  
   
   // No SSR
   import { ApplicationConfig } from '@angular/core';

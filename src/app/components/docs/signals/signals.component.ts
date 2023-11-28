@@ -1,4 +1,4 @@
-import { Component, WritableSignal, signal, Signal } from '@angular/core';
+import { Component, WritableSignal, Signal, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SyntaxHighlightComponent } from '../../../shared/syntax-highlight/syntax-highlight.component';
 
@@ -11,6 +11,8 @@ import { SyntaxHighlightComponent } from '../../../shared/syntax-highlight/synta
 })
 export class SignalsComponent {
   countWritable: WritableSignal<number> = signal(0);
+  countComputed: Signal<number> = computed(() => this.countWritable() * 2);
+  
   countReadOnly: Signal<number> = signal(100);
   countReadOnlyAlt = signal(100).asReadonly();
   
@@ -23,7 +25,7 @@ export class SignalsComponent {
     // .set() is not available on ReadOnly signals
   }
 
-  signalCode: string = `  import { Component, WritableSignal, signal, Signal } from '@angular/core';
+  signalCode: string = `  import { Component, WritableSignal, Signal, signal, computed } from '@angular/core';
   ...
   
   @Component({
@@ -35,6 +37,8 @@ export class SignalsComponent {
   })
   export class SignalsComponent {
     countWritable: WritableSignal<number> = signal(0);
+    countComputed: Signal<number> = computed(() => this.countWritable() * 2);
+
     countReadOnly: Signal<number> = signal(100);
     countReadOnlyAlt = signal(100).asReadonly();
     
@@ -49,6 +53,6 @@ export class SignalsComponent {
   }`
 
   signalTemplate: string = `  <p class="m-0">Count: {{ countWritable() }}</p>
-  <p class="m-0">Count * Count: {{ countWritable() * countWritable() }}</p>
+  <p class="m-0">Computed Count: {{ countComputed() }}</p>
   <p class="m-0">Count (ReadOnly) : {{ countReadOnly() }}</p>`;
 }
