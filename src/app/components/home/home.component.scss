@@ -28,6 +28,12 @@
     }
 }
 
+.card-challenge {
+    &:before {
+        background: linear-gradient(225deg, rgba(240, 7, 12, 1) 0%, rgba(204, 38, 213, 1) 50%, rgba(119, 2, 255, 1) 100%);
+    }
+}
+
 .card:hover {
     color: #FFF;
     transition: all 0.3s ease;

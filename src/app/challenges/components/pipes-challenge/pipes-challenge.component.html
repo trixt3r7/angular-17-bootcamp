@@ -1,0 +1,81 @@
+<h1>Challenge: Pipes</h1>
+<h3>Description</h3>
+<p>
+    Pipes are a great way to format data in your templates. These are based on challenges found on the internet.
+</p>
+<ul>
+    <li>If more than two arguments for a pipe it's good practice to place them in an array/object.</li>
+</ul>
+
+<hr class="my-4">
+
+<h4>Truncate</h4>
+<p>
+    This challenge is a pipe that truncates a string at a specified length and adds dots at the end.
+</p>
+<span class="d-block fw-semibold">Arguments</span>
+<ul>
+    <li><code>length</code>: The max length of the sentence. Has a default length of 30 character if not specified.</li>
+    <li><code>fullWord</code>: A boolean that if set to <code>true</code> will not clip the last word.</li>
+</ul>
+
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Input</span>
+    <p>Original string: {{truncateString}}</p>
+    <span class="d-block fw-semibold">Result</span>
+    <p>Truncated string (no arguments): {{ truncateString | truncate }}</p>
+    <p>Truncated string (40): {{ truncateString | truncate: 40 }}</p>
+    <p>Truncated string (40 : true): {{ truncateString | truncate: 40 : true }}</p>
+</div>
+<shared-syntax-highlight 
+    title="truncate.pipe.ts" 
+    [code]="truncatePipeCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="truncateTemplate" 
+    language="xml">
+</shared-syntax-highlight>
+
+<hr class="my-4">
+
+<h4>Filter term</h4>
+<p>
+    Pipe takes in an array of strings and filters it by a string.
+</p>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">List of names</span>
+    {{ filterTermList }}
+
+    <span class="d-block fw-semibold mt-3">Search term</span>
+    <input type="text" class="form-control" [(ngModel)]="searchTerm">
+    
+    <span class="d-block fw-semibold mt-3">Result</span>
+    {{ filterTermList | filterTerm: searchTerm }}
+    
+    <span class="d-block fw-semibold mt-3">Result with a for-loop</span>
+    <ul>
+        @for(name of filterTermList | filterTerm: searchTerm; track name)
+        {
+            <li><code>{{ name }}</code></li>
+        }
+    </ul>
+
+
+</div>
+<shared-syntax-highlight 
+    title="filter-term.pipe.ts" 
+    [code]="filterTermPipeCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.ts" 
+    [code]="filterTermCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="filterTermTemplate" 
+    language="xml">
+</shared-syntax-highlight>

@@ -1,0 +1,23 @@
+<h1>Challenge: Directives</h1>
+<h3>Description</h3>
+<p>
+    Directives are a great way to manipulate the DOM. These are based on challenges found on the internet.
+</p>
+
+<hr class="my-4">
+
+<h4>Directive: Scale</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Result on hover image</span>
+    <img appScale class="p-3" src="../../../../assets/angular-logo.svg" alt="" width="200px">
+</div>
+<shared-syntax-highlight 
+    title="scale.directive.ts" 
+    [code]="scaleDirectiveCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.ts" 
+    [code]="scaleTemplate" 
+    language="typescript">
+</shared-syntax-highlight>

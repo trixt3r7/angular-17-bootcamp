@@ -13,7 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
   Icons = Icons;
-  guideCards: GuideCard[] = [];
+  guideCards: HomeCard[] = [];
+  challengeCards: HomeCard[] = [];
 
   constructor() 
   {
@@ -25,12 +26,15 @@ export class HomeComponent {
       { title: 'SSR', description: 'Angular SSR...', link: '/ssr' }
       ];
 
-
+      this.challengeCards = [
+        { title: 'Pipes', description: 'Pipes are a great way to format data in your templates.', link: '/challenge-pipes' },
+        { title: 'Directives', description: 'Directives are a great way to manipulate the DOM.', link: '/challenge-directives' }
+      ];
   }
 
 }
 
-export interface GuideCard {
+export interface HomeCard {
   title: string;
   description: string;
   link: string;
