@@ -1,0 +1,73 @@
+<app-top-of-page anchorUrl="/challenge-components" />
+<h1>Challenge: Components</h1>
+<h3>Description</h3>
+<p>
+    ...
+</p>
+<shared-shortcuts [anchorLinks]="anchorLinks" />
+
+<hr class="my-4">
+
+<h4 id="accordion">Accordion Items</h4>
+<p>Accordion component that takes an object array and makes accordions.</p>
+<span class="d-block fw-semibold">Arguments</span>
+<ul>
+    <li><code>[items]</code> Pointing to an array with properties: title, content, isExpanded</li>
+</ul>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Result</span>
+    <app-accordion-items [items]="accordionItems" />
+</div>
+@for(item of accordionItemsComponent; track item)
+{
+    <shared-syntax-highlight 
+        [title]="item.title"
+        [code]="item.code"
+        [language]="item.language">
+    </shared-syntax-highlight>
+}
+
+<hr class="my-4">
+
+<h4 id="loader">Loader</h4>
+<p>A loader component that can show a loading animation at page load. Has an overlay with a blur effect.</p>
+<ul>
+    <li><code>isLoading</code> is a boolean to toggle loading on/off</li>
+    <li><code>loadTimer</code> takes a number that represent milliseconds for the length of the loading animation</li>
+</ul>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Result</span>
+    Current state: loads for 2400 milliseconds
+    <!-- <strong class="text-danger">APP-LOADER DISABLED</strong> -->
+    <app-loader [isLoading]="true" [loadTimer]="2400" />
+</div>
+
+@for(item of loaderComponent; track item)
+{
+    <shared-syntax-highlight 
+        [title]="item.title"
+        [code]="item.code"
+        [language]="item.language">
+    </shared-syntax-highlight>
+}
+
+<hr class="my-4">
+
+<h4 id="topofpage">Top of page</h4>
+<p>A button that takes you to the top of the page after scrolling down.</p>
+<span class="d-block fw-semibold">Arguments</span>
+<ul>
+    <li><code>anchorUrl</code> takes a string that should be the current page url.</li>
+</ul>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Result</span>
+    After scrolling down 600px the "Top" button should appear in the upper right & disappear below 600px.
+</div>
+@for(item of topOfPageComponent; track item)
+{
+    <shared-syntax-highlight 
+        [title]="item.title"
+        [code]="item.code"
+        [language]="item.language">
+    </shared-syntax-highlight>
+}

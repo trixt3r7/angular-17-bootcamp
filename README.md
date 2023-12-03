@@ -3,6 +3,8 @@
 ## Resources
 [ngx-highlightjs - Angular syntax highlighting library](https://www.npmjs.com/package/ngx-highlightjs)
 
+## Commands
+ng build --output-path docs --base-href /angular-17-bootcamp/
 
 
 

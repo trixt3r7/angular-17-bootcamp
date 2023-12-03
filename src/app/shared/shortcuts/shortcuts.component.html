@@ -1,0 +1,9 @@
+<h4>Shortcuts</h4>
+@for(item of anchorLinks; track item)
+{
+    <a [href]="item.anchor">{{ item.title }}</a>
+    @if($last === false)
+    {
+        |
+    }
+}

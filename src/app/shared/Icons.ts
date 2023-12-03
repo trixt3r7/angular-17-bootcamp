@@ -1,4 +1,4 @@
-import { faCamera, faCopy, faVial, faCircleArrowRight, faArrowRight, faSignsPost } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faCopy, faVial, faCircleArrowRight, faArrowRight, faSignsPost, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 export class Icons {
     static readonly camera = faCamera;
@@ -7,4 +7,6 @@ export class Icons {
     static readonly arrowRightCircle = faCircleArrowRight;
     static readonly arrowRight = faArrowRight;
     static readonly signsPost = faSignsPost;
+    static readonly chevronDown = faChevronDown;
+    static readonly chevronUp = faChevronUp;
 }

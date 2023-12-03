@@ -7,11 +7,13 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { Icons } from '../../../shared/Icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SyntaxHighlightComponent } from '../../../shared/syntax-highlight/syntax-highlight.component';
+import { TopOfPageComponent } from '../../../challenges/components/top-of-page/top-of-page.component';
 
 @Component({
   selector: 'app-pipes',
   standalone: true,
-  imports: [CommonModule, ReversePipe, FileSizePipe, FormsModule, HighlightModule, FontAwesomeModule, SyntaxHighlightComponent],
+  imports: [CommonModule, ReversePipe, FileSizePipe, FormsModule, HighlightModule, FontAwesomeModule, 
+    SyntaxHighlightComponent, TopOfPageComponent],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.scss'
 })

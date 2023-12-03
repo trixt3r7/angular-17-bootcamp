@@ -12,26 +12,24 @@ import { SyntaxHighlightComponent } from '../../../shared/syntax-highlight/synta
 })
 export class DirectivesChallengeComponent {
 
-
   scaleDirectiveCode = `import { Directive, ElementRef, HostListener } from '@angular/core';
-
-  @Directive({
-    selector: '[appScale]',
-    standalone: true
-  })
-  export class ScaleDirective {
-    constructor(private element: ElementRef) { }
-    
-    @HostListener('mouseenter') onMouseEnter() {
-      this.element.nativeElement.style.transition = 'transform 0.3s ease';
-      this.element.nativeElement.style.transform = 'scale(1.25)';
-    }
+@Directive({
+  selector: '[appScale]',
+  standalone: true
+})
+export class ScaleDirective {
+  constructor(private element: ElementRef) { }
   
-    @HostListener('mouseleave') onMouseLeave() {
-      this.element.nativeElement.style.transition = 'transform 0.2s ease';
-      this.element.nativeElement.style.transform = 'scale(1)';
-    }
-  }`;
+  @HostListener('mouseenter') onMouseEnter() {
+    this.element.nativeElement.style.transition = 'transform 0.3s ease';
+    this.element.nativeElement.style.transform = 'scale(1.25)';
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.element.nativeElement.style.transition = 'transform 0.2s ease';
+    this.element.nativeElement.style.transform = 'scale(1)';
+  }
+}`;
 
   scaleTemplate = `<img appScale class="p-3" src="../../../../assets/angular-logo.svg" alt="" width="200px">`;
 }

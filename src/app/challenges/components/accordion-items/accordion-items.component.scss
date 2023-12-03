@@ -1,0 +1,28 @@
+.accordion {
+  width: 100%;
+  border: 1px solid #e1e4e8;
+  border-radius: .5rem;
+  overflow: hidden;
+  margin-bottom: .5rem;
+  background-color: #eee;
+}
+
+.accordion-item-header {
+  background-color: rgba(204, 38, 213, 0.1);
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accordion-item-content {
+  padding: 10px;
+  display: none;
+  
+
+  &.accordion-item-content--open {
+    display: block;
+  }
+}
+.accordion-item-header-icon {
+  float: right;
+}

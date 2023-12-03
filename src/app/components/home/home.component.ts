@@ -28,7 +28,8 @@ export class HomeComponent {
 
       this.challengeCards = [
         { title: 'Pipes', description: 'Pipes are a great way to format data in your templates.', link: '/challenge-pipes' },
-        { title: 'Directives', description: 'Directives are a great way to manipulate the DOM.', link: '/challenge-directives' }
+        { title: 'Directives', description: 'Directives are a great way to manipulate the DOM.', link: '/challenge-directives' },
+        { title: 'Components', description: 'Components challenges...', link: '/challenge-components' }
       ];
   }
 

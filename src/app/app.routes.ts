@@ -8,6 +8,7 @@ import { DeferComponent } from './components/docs/defer/defer.component';
 
 import { PipesChallengeComponent } from './challenges/components/pipes-challenge/pipes-challenge.component';
 import { DirectivesChallengeComponent } from './challenges/components/directives-challenge/directives-challenge.component';
+import { ComponentsChallengeComponent } from './challenges/components/components-challenge/components-challenge.component';
 
 export const routes: Routes = [
     // Angular Docs
@@ -21,6 +22,7 @@ export const routes: Routes = [
     // Challenges
     { path: 'challenge-pipes', component: PipesChallengeComponent },
     { path: 'challenge-directives', component: DirectivesChallengeComponent },
+    { path: 'challenge-components', component: ComponentsChallengeComponent },
     
     
     {  path: '', redirectTo: '/home', pathMatch: 'full' }
