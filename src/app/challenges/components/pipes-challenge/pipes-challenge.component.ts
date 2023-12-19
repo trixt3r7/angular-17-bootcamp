@@ -24,10 +24,10 @@ export class PipesChallengeComponent {
 
   Icons = Icons;
   anchorLinks: any[] = [
-    {anchor: '/challenge-pipes#truncate', title: 'Truncate'},
-    {anchor: '/challenge-pipes#filterterm', title: 'Filter Term'},
-    {anchor: '/challenge-pipes#sortby', title: 'Sort By'},
-    {anchor: '/challenge-pipes#creditcardformatter', title: 'Credit Card Formatter'}
+    {anchor: './challenge-pipes#truncate', title: 'Truncate'},
+    {anchor: './challenge-pipes#filterterm', title: 'Filter Term'},
+    {anchor: './challenge-pipes#sortby', title: 'Sort By'},
+    {anchor: './challenge-pipes#creditcardformatter', title: 'Credit Card Formatter'}
   ];
 
   // Truncate ===========================================================
