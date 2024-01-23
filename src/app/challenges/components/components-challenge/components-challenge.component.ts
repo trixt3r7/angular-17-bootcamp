@@ -22,10 +22,10 @@ export class ComponentsChallengeComponent {
   codeSnippets = ComponentsCodeSnipptes;
 
   anchorLinks: any[] = [
-    {anchor: '/challenge-components#accordion', title: 'Accordion'},
-    {anchor: '/challenge-components#loader', title: 'Loader'},
-    {anchor: '/challenge-components#topofpage', title: 'Top of Page'},
-    {anchor: '/challenge-components#snackbar', title: 'Snackbar'},
+    {anchor: './challenge-components#accordion', title: 'Accordion'},
+    {anchor: './challenge-components#loader', title: 'Loader'},
+    {anchor: './challenge-components#topofpage', title: 'Top of Page'},
+    {anchor: './challenge-components#snackbar', title: 'Snackbar'},
   ];
 
   accordionItemsComponent = this.codeSnippets.accordionItemsComponent;
