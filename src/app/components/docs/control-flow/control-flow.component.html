@@ -1,0 +1,103 @@
+<h1>Control Flow</h1>
+<p>
+    <strong>Angular Docs:&nbsp;</strong> <a href="https://angular.dev/essentials/conditionals-and-loops" target="_blank">Conditionals and Loops</a><br>
+    <strong>Angular Univeristy:&nbsp;</strong> <a href="https://blog.angular-university.io/angular-if/" target="_blank">Angular &#64;if: Complete Guide</a>
+    
+</p>
+<h3>Description</h3>
+<p>
+    Angular uses built-in control flow blocks, which tell the framework when and how your templates should be rendered. Examples of this include: displaying content based on a certain condition, rendering a list of items based on application data, etc.
+</p>
+
+<h4>Conditional Rendering</h4>
+<p><code>&#64;if</code>&nbsp;<code>&#64;else</code></p>
+<p>One of the most common scenarios that developers encounter is the desire to show or hide content in templates based on a condition.</p>
+
+<h4>Rendering lists</h4>
+<p><code>&#64;for</code>&nbsp;<code>&#64;empty</code></p>
+<p>Another common scenario developers encounter is the need to render a list of items.</p>
+<p>You can optionally include an <code>&#64;empty</code> section immediately after the <code>&#64;for</code> block content. The content of the <code>&#64;empty</code> block displays when there are no items.</p>
+
+<h5><code class="fs-5">track</code> property</h5>
+<p>When using <code>&#64;for</code> to render a list of items, you can use the <code>track</code> property to improve performance. The <code>track</code> property takes a unique identifier for each item in the list. This allows Angular to track which items have changed, and only update those items. When in doubt, using track <code>$index</code> is a good default.</p>
+<p>This ensures any updates to the list are reflected correctly in the UI and tracked properly within Angular, especially in the case of stateful elements or animations.</p>
+
+<h5>Implicit variables that are available in a <code class="fs-5">&#64;for</code></h5>
+<!-- Make a bootstrap table -->
+<table>
+    <thead>
+        <tr>
+            <th class="pe-5">Variable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>$index</code></td>
+            <td>The index of the current item in the list</td>
+        </tr>
+        <tr>
+            <td><code>$count</code></td>
+            <td>The total number of items in the list</td>
+        </tr>
+        <tr>
+            <td><code>$even</code></td>
+            <td>True if the current item has an even index</td>
+        </tr>
+        <tr>
+            <td><code>$odd</code></td>
+            <td>True if the current item has an odd index</td>
+        </tr>
+        <tr>
+            <td><code>$first</code></td>
+            <td>True if the current item is the first item in the list</td>
+        </tr>
+        <tr>
+            <td><code>$last</code></td>
+            <td>True if the current item is the last item in the list</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<h4>Simple <code class="fs-5">&#64;if</code>&nbsp;<code class="fs-5">&#64;else</code></h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <button class="btn btn-primary text-white mb-2" (click)="toggleIsAdmin()">Toggle isAdmin</button>
+    <span class="d-block fw-semibold">Result</span>
+    @if (isAdmin) {
+        <button class="btn btn-danger">Erase database</button>
+        }
+        @else {
+        <p>You are not authorized.</p>
+    }
+</div>
+@for(item of simpleIfElseComponent; track item)
+{
+    <shared-syntax-highlight 
+        [title]="item.title"
+        [code]="item.code"
+        [language]="item.language">
+    </shared-syntax-highlight>
+}
+
+<h4>Ingredients List with <code class="fs-5">&#64;for</code></h4>
+
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <button class="btn btn-primary text-white mb-2" (click)="emptyIngredientList()">Toggle empty ingredientList</button>
+    <span class="d-block fw-semibold">Result</span>
+    <ul>
+        @for (ingredient of ingredientList; track ingredient.name) {
+          <li>{{ ingredient.quantity }} - {{ ingredient.name }}</li>
+        }@empty {
+            <li> There are no items. </li>
+          }
+      </ul>
+</div>
+@for(item of ingredientsListComponent; track item)
+{
+    <shared-syntax-highlight 
+        [title]="item.title"
+        [code]="item.code"
+        [language]="item.language">
+    </shared-syntax-highlight>
+}

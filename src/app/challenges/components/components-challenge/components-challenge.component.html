@@ -1,4 +1,4 @@
-<app-top-of-page anchorUrl="/challenge-components" />
+<app-top-of-page anchorUrl="./challenge-components" />
 <h1>Challenge: Components</h1>
 <h3>Description</h3>
 <p>
@@ -39,7 +39,7 @@
     <span class="d-block fw-semibold">Result</span>
     Current state: loads for 2400 milliseconds
     <!-- <strong class="text-danger">APP-LOADER DISABLED</strong> -->
-    <app-loader [isLoading]="true" [loadTimer]="2400" />
+    <app-loader [isLoading]="false" [loadTimer]="2400" />
 </div>
 
 @for(item of loaderComponent; track item)
@@ -71,3 +71,17 @@
         [language]="item.language">
     </shared-syntax-highlight>
 }
+
+<hr class="my-4">
+
+<h4 id="snackbar">Snackbar</h4>
+<p>A snackbar component that shows a message for 3 seconds.</p>
+<span class="d-block fw-semibold">Arguments</span>
+<ul>
+    <li><code>message</code> takes a string that should be the message to show.</li>
+</ul>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <button class="btn btn-primary text-white mb-3" (click)="showSnackbar()">Show Snackbar</button>
+    <span class="d-block fw-semibold">Result</span>
+    <app-snackbar [message]="snackbarMessage" />
+</div>
