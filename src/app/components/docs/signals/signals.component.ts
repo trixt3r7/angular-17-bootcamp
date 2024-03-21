@@ -55,4 +55,31 @@ export class SignalsComponent {
   signalTemplate: string = `  <p class="m-0">Count: {{ countWritable() }}</p>
   <p class="m-0">Computed Count: {{ countComputed() }}</p>
   <p class="m-0">Count (ReadOnly) : {{ countReadOnly() }}</p>`;
+
+  objectPerson: WritableSignal<any> = signal({ name: 'John', age: 25 });
+
+  increaseAge() {
+    this.objectPerson.set({ ...this.objectPerson(), age: this.objectPerson().age + 1 });
+  }
+
+  signalObjectCode: string = `  import { Component, WritableSignal, Signal, signal, computed } from '@angular/core';
+  ...
+  
+  @Component({
+    selector: 'app-signals',
+    standalone: true,
+    imports: [CommonModule, SyntaxHighlightComponent],
+    templateUrl: './signals.component.html',
+    styleUrl: './signals.component.scss'
+  })
+  export class SignalsComponent {
+    objectPerson: WritableSignal<any> = signal({ name: 'John', age: 25 });
+
+    increaseAge() {
+      this.objectPerson.set({ ...this.objectPerson(), age: this.objectPerson().age + 1 });
+    }
+  }`
+
+  signalObjectTemplate: string = `<p class="m-0">Object: {{ objectPerson() | json }}</p>`;
 }
+

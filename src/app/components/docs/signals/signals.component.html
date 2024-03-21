@@ -35,3 +35,27 @@
     [code]="signalTemplate" 
     language="xml">
 </shared-syntax-highlight>
+
+<h4>Signals: Update object properties</h4>
+<div class="border p-3 mb-3 rounded shadow-sm">
+    <span class="d-block fw-semibold">Action</span>
+    <div class="input-group mb-3 py-1">
+        <button class="btn btn-primary text-white" (click)="increaseAge()">
+            Update Age
+        </button>
+    </div>
+
+    <span class="d-block fw-semibold">Result</span>
+    <p class="m-0">Object: {{ objectPerson() | json }}</p>
+</div>
+
+<shared-syntax-highlight 
+    title="app.component.ts" 
+    [code]="signalObjectCode" 
+    language="typescript">
+</shared-syntax-highlight>
+<shared-syntax-highlight 
+    title="app.component.html" 
+    [code]="signalObjectTemplate" 
+    language="xml">
+</shared-syntax-highlight>
